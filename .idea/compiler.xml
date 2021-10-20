@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="MarketingCompanyLogic" />
         <module name="MarketingCompanyDomain" />
         <module name="MarketingCompanyWebApplication" />
         <module name="MarketingCompanyTranslator" />
@@ -16,6 +17,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="MarketingCompanyDomain" options="-parameters" />
+      <module name="MarketingCompanyLogic" options="-parameters" />
       <module name="MarketingCompanyRepository" options="-parameters" />
       <module name="MarketingCompanyTranslator" options="-parameters" />
       <module name="MarketingCompanyWebApplication" options="-parameters" />

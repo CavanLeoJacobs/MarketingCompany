@@ -19,6 +19,7 @@
         <module>MarketingCompanyRepository</module>
         <module>MarketingCompanyWebApplication</module>
         <module>MarketingCompanyTranslator</module>
+        <module>MarketingCompanyLogic</module>
     </modules>
 
     <properties>
