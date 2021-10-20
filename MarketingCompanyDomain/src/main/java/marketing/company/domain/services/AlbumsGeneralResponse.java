@@ -1,5 +1,6 @@
 package marketing.company.domain.services;
 
-public class GeneralResponse {
+public class AlbumsGeneralResponse
+{
 
 }

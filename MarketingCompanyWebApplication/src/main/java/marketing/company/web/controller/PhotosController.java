@@ -2,7 +2,7 @@ package marketing.company.web.controller;
 
 
 
-public class Controllor {
+public class PhotosController {
 /*
 @SpringBootApplication
 @RestController
@@ -17,7 +17,11 @@ public class Controllor {
     })
 
 
-    */
+
+*/
+    //public GeneralResponse<String> getAll() {
+     //   return new GeneralResponse<String>(true, "No Types Found");
+    //}
 
 
 }
