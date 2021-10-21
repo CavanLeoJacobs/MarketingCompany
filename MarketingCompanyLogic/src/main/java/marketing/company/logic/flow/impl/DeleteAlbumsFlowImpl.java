@@ -1,4 +1,6 @@
 package marketing.company.logic.flow.impl;
 
-public class DeleteAlbumsFlowImpl {
+import marketing.company.logic.flow.DeleteAlbumsFlow;
+
+public class DeleteAlbumsFlowImpl implements DeleteAlbumsFlow {
 }

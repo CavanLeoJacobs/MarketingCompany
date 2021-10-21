@@ -1,10 +1,13 @@
 package marketing.company.domain.dto;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 
-public class PhotosDto
+public class PhotosDto implements Serializable
 {
+    private static final long serialVersionUID = 6568108165313641961L;
+
     private long PhotoID;
     private String FileFormat;
     private String Geolocation;

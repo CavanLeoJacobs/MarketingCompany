@@ -1,6 +1,9 @@
 package marketing.company.domain.services;
 
-public class AlbumsGeneralResponse
+import java.io.Serializable;
+
+public class AlbumsGeneralResponse implements Serializable
 {
 
+    private static final long serialVersionUID = 1314535159669886339L;
 }

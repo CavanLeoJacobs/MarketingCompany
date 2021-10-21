@@ -1,4 +1,6 @@
 package marketing.company.logic.flow.impl;
 
-public class DownloadPhotosFlowImpl {
+import marketing.company.logic.flow.DownloadPhotosFlow;
+
+public class DownloadPhotosFlowImpl implements DownloadPhotosFlow {
 }

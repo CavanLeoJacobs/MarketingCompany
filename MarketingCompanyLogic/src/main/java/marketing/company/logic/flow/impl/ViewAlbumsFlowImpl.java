@@ -1,4 +1,6 @@
 package marketing.company.logic.flow.impl;
 
-public class ViewAlbumsFlowImpl {
+import marketing.company.logic.flow.ViewAlbumsFlow;
+
+public class ViewAlbumsFlowImpl implements ViewAlbumsFlow {
 }
