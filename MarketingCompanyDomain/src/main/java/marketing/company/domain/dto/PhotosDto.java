@@ -1,6 +1,7 @@
 package marketing.company.domain.dto;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class PhotosDto
 {
@@ -11,6 +12,9 @@ public class PhotosDto
     private LocalDate CapturedDate;
     private LocalDate CapturedBy;
     //I am not 100% sure what they mean? (Captured by) in project 2 scope
+
+
+
 
 
 }
