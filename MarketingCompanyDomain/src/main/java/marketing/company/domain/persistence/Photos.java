@@ -1,30 +1,28 @@
-package marketing.company.domain.dto;
+package marketing.company.domain.persistence;
 
-import marketing.company.domain.persistence.Albums;
-import marketing.company.domain.persistence.Photos;
-
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.List;
 
-public class PhotosDto implements Serializable
+@Entity
+@Table
+public class Photos implements Serializable
 {
-    private static final long serialVersionUID = 6568108165313641961L;
-
-    private long PhotoID;
+    private static final long serialVersionUID = 461151729495873009L;
+    private Long photo_id;
     private String FileFormat;
     private String Geolocation;
     private String Tags;
     private LocalDate CapturedDate;
     private LocalDate CapturedBy;
-    //I am not 100% sure what they mean? (Captured by) in project 2 scope
 
+    public Photos()
+    {
 
-    public PhotosDto() {
     }
 
-    public PhotosDto(long photoID, String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
-        PhotoID = photoID;
+    public Photos(Long photo_id, String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
+        this.photo_id = photo_id;
         FileFormat = fileFormat;
         Geolocation = geolocation;
         Tags = tags;
@@ -32,38 +30,38 @@ public class PhotosDto implements Serializable
         CapturedBy = capturedBy;
     }
 
-    public PhotosDto(Photos photos)
-    {
-
-
+    public Photos(String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
+        FileFormat = fileFormat;
+        Geolocation = geolocation;
+        Tags = tags;
+        CapturedDate = capturedDate;
+        CapturedBy = capturedBy;
     }
 
-    public long getPhotoID() {
-        return PhotoID;
+    @Id
+    @Column(name = "photo_id", nullable = false)
+    public Long getPhoto_id() {
+        return photo_id;
     }
-
+    @Column()
     public String getFileFormat() {
         return FileFormat;
     }
-
+    @Column()
     public String getGeolocation() {
         return Geolocation;
     }
-
+    @Column()
     public String getTags() {
         return Tags;
     }
-
+    @Column()
     public LocalDate getCapturedDate() {
         return CapturedDate;
     }
-
+    @Column()
     public LocalDate getCapturedBy() {
         return CapturedBy;
-    }
-
-    public void setPhotoID(long photoID) {
-        PhotoID = photoID;
     }
 
     public void setFileFormat(String fileFormat) {
@@ -85,4 +83,10 @@ public class PhotosDto implements Serializable
     public void setCapturedBy(LocalDate capturedBy) {
         CapturedBy = capturedBy;
     }
+
+    public void setPhoto_id(Long photo_id) {
+        this.photo_id = photo_id;
+    }
+
+
 }

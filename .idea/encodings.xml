@@ -2,9 +2,13 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/MarketingCompanyDomain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MarketingCompanyDomain/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MarketingCompanyLogic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MarketingCompanyLogic/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MarketingCompanyRepository/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MarketingCompanyRepository/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MarketingCompanyTranslator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MarketingCompanyTranslator/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MarketingCompanyWebApplication/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />

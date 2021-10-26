@@ -9,9 +9,18 @@ public class ApplicationMain
 {
     public static void main(String[] args)
     {
+        try
+        {
 
-        SpringApplication.run(ApplicationMain.class,args);
-
+            SpringApplication.run(ApplicationMain.class, args);
+        }
+         catch(Exception e)
+             {
+                 System.out.println(e.getMessage());
+             }
     }
+
+
+
 
 }

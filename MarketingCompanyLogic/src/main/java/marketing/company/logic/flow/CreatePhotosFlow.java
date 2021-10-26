@@ -1,4 +1,6 @@
 package marketing.company.logic.flow;
 
-public interface CreatePhotosFlow {
+public interface CreatePhotosFlow
+{
+    //CreatePhotos
 }

@@ -1,4 +1,7 @@
 package marketing.company.logic.flow;
 
-public interface ViewPhotosFlow {
+public interface ViewPhotosFlow
+{
+   void ViewPhotos();
+
 }

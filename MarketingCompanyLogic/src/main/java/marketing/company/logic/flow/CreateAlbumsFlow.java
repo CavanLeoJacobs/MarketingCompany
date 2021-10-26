@@ -1,4 +1,6 @@
 package marketing.company.logic.flow;
 
-public interface CreateAlbumsFlow {
+public interface CreateAlbumsFlow
+{
+   //void CreateAlbums;
 }

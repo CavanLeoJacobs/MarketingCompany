@@ -1,4 +1,6 @@
 package marketing.company.logic.flow;
 
-public interface SearchPhotosFlow {
+public interface SearchPhotosFlow
+{
+   void SearchPhotos();
 }

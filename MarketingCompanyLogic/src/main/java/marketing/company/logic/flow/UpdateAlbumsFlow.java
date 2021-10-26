@@ -1,4 +1,6 @@
 package marketing.company.logic.flow;
 
-public interface UpdateAlbumsFlow {
+public interface UpdateAlbumsFlow
+{
+   // UpdateAlbums
 }
