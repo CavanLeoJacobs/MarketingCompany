@@ -1,7 +1,10 @@
 package marketing.company.logic.flow;
 
+import marketing.company.domain.dto.PhotosDto;
+
 public interface ViewPhotosFlow
 {
-   void ViewPhotos();
+
+   PhotosDto ViewPhotos(PhotosDto photos);
 
 }

@@ -32,10 +32,14 @@ public class PhotosDto implements Serializable
         CapturedBy = capturedBy;
     }
 
-    public PhotosDto(Photos photos)
+    public PhotosDto(PhotosDto photos)
     {
-
-
+        this.setPhotoID(photos.getPhotoID());
+        this.setFileFormat(photos.getFileFormat());
+        this.setGeolocation(photos.getGeolocation());
+        this.setTags(photos.getTags());
+        this.setCapturedDate(photos.getCapturedDate());
+        this.setCapturedBy(photos.getCapturedBy());
     }
 
     public long getPhotoID() {

@@ -4,5 +4,11 @@ import marketing.company.logic.flow.DeletePhotosFlow;
 
 public class DeletePhotosFlowImpl implements DeletePhotosFlow
 {
+    public DeletePhotosFlowImpl() {
+    }
 
+    public void DeletePhotos()
+    {
+
+    }
 }

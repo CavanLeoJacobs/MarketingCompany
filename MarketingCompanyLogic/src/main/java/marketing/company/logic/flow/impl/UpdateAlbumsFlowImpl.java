@@ -4,5 +4,11 @@ import marketing.company.logic.flow.UpdateAlbumsFlow;
 
 public class UpdateAlbumsFlowImpl implements UpdateAlbumsFlow
 {
+    public UpdateAlbumsFlowImpl() {
+    }
 
+    public void UpdateAlbums()
+    {
+
+    }
 }

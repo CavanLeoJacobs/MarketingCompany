@@ -1,21 +1,18 @@
 package marketing.company.logic.flow.impl;
 
-import marketing.company.domain.dto.AlbumsDto;
+
+import marketing.company.logic.flow.ViewAlbumsFlow;
 
 
-
-
-public class ViewAlbumsFlowImpl //implements ViewAlbumsFlow
+public class ViewAlbumsFlowImpl implements ViewAlbumsFlow
 {
-   //public final ViewAlbumsFlow viewAlbumsFlow;
-
-   public ViewAlbumsFlowImpl()
+   public void ViewAlbums()
    {
 
    }
 
-   public AlbumsDto ViewAlbums(AlbumsDto viewAlbumsDto)
-   {
-      return ViewAlbums(viewAlbumsDto);
-   }
+   //public AlbumsDto ViewAlbums(AlbumsDto viewAlbumsDto)
+   //{
+    //  return ViewAlbums(viewAlbumsDto);
+   //}
 }

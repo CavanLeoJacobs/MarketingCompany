@@ -8,6 +8,7 @@ import java.time.LocalDate;
 public class AlbumsDto implements Serializable
 {
   private static final long serialVersionUID = 797566274463787428L;
+
   private long AlbumsID;
   private String FileFormat;
   private String Geolocation;
@@ -31,13 +32,18 @@ public class AlbumsDto implements Serializable
 
   public AlbumsDto(Albums albums)
   {
-
+    this.setAlbumsID(albums.getAlbums_ID());
+    this.setFileFormat(albums.getFileFormat());
+    this.setGeolocation(albums.getGeolocation());
+    this.setTags(albums.getTags());
+    this.setCapturedDate(albums.getCapturedDate());
+    this.setCapturedBy(albums.getCapturedBy());
 
   }
 
 
 
-  public void setAlbumsID(long albumsID) {
+  public void setAlbumsID(Long albumsID) {
     AlbumsID = albumsID;
   }
 
@@ -60,8 +66,8 @@ public class AlbumsDto implements Serializable
   public void setCapturedBy(LocalDate capturedBy) {
     CapturedBy = capturedBy;
   }
-  public long getAlbumsID() {return AlbumsID;
-  }
+
+  public long getAlbums_ID() {return AlbumsID;}
 
   public String getFileFormat() {
     return FileFormat;
