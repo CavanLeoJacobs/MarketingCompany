@@ -30,9 +30,9 @@ public class AlbumsDto implements Serializable
     CapturedBy = capturedBy;
   }
 
-  public AlbumsDto(Albums albums)
+  public AlbumsDto(AlbumsDto albums)
   {
-    this.setAlbumsID(albums.getAlbums_ID());
+   // this.setAlbumsID(albums.getAlbums_ID());
     this.setFileFormat(albums.getFileFormat());
     this.setGeolocation(albums.getGeolocation());
     this.setTags(albums.getTags());

@@ -34,7 +34,7 @@ public class PhotosDto implements Serializable
 
     public PhotosDto(PhotosDto photos)
     {
-        this.setPhotoID(photos.getPhotoID());
+       // this.setPhotoID(photos.getPhotoID());
         this.setFileFormat(photos.getFileFormat());
         this.setGeolocation(photos.getGeolocation());
         this.setTags(photos.getTags());

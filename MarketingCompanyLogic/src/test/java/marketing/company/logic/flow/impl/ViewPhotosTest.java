@@ -19,6 +19,6 @@ photosV = new ViewPhotosFlowImpl();
     @Test
     public void viewPhotos()
     {
-        System.out.print(photosV.ViewPhotos(photos));
+       // System.out.print(photosV.ViewPhotos(photos));
     }
 }

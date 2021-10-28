@@ -12,8 +12,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
         "marketing.company.repo.persistence"})
 @EnableJpaRepositories("marketing.company.repo.persistence")
 @PropertySource(value = "classpath:DataBase.properties")
-
-
 public class RepositoryConfig
 {
 

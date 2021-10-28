@@ -43,23 +43,23 @@ public class Photos implements Serializable
     public Long getPhoto_id() {
         return photo_id;
     }
-    @Column()
+    @Column(name = "FileFormat")
     public String getFileFormat() {
         return FileFormat;
     }
-    @Column()
+    @Column(name = "Geolocation")
     public String getGeolocation() {
         return Geolocation;
     }
-    @Column()
+    @Column(name = "Tags")
     public String getTags() {
         return Tags;
     }
-    @Column()
+    @Column(name = "CapturedDate")
     public LocalDate getCapturedDate() {
         return CapturedDate;
     }
-    @Column()
+    @Column(name = "CapturedBy")
     public LocalDate getCapturedBy() {
         return CapturedBy;
     }
