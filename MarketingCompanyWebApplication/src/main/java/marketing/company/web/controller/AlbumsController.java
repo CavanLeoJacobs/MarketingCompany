@@ -1,8 +1,6 @@
 package marketing.company.web.controller;
 
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
+
 import marketing.company.domain.dto.AlbumsDto;
 import marketing.company.domain.services.AlbumsGeneralResponse;
 import marketing.company.logic.flow.ViewAlbumsFlow;
@@ -23,6 +21,7 @@ import java.util.List;
 
 public class AlbumsController
 {
+/*
     @GetMapping("/all")
     @ApiOperation(value = "Gets all the configured Account types.", notes = "Returns a list of account types")
     @ApiResponses(value = {
@@ -48,4 +47,6 @@ public class AlbumsController
 
     }
     private final ViewAlbumsFlow viewAlbumsFlow;
+
+ */
 }

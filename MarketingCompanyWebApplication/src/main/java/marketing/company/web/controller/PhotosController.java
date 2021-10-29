@@ -1,9 +1,7 @@
 package marketing.company.web.controller;
 
 
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
+
 import marketing.company.domain.dto.PhotosDto;
 import marketing.company.domain.services.PhotosGeneralResponse;
 import marketing.company.logic.flow.ViewAlbumsFlow;
@@ -24,6 +22,8 @@ import java.util.List;
 
 
 public class PhotosController {
+}
+
 /*
 @SpringBootApplication
 @RestController
@@ -36,29 +36,29 @@ public class PhotosController {
             @ApiResponse(code = 404, message = "Not found", response = GeneralResponse.class),
             @ApiResponse(code = 500, message = "Internal Server Error", response = GeneralResponse.class),
     })
-
-
-
 */
+
+
+
     //public GeneralResponse<String> getAll() {
      //   return new GeneralResponse<String>(true, "No Types Found");
     //}
 
-    @GetMapping("/all")
-    @ApiOperation(value = "Gets all the configured Account types.", notes = "Returns a list of account types")
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Account types returned", response = PhotosGeneralResponse.class),
-            @ApiResponse(code = 400, message = "Bad Request", response = PhotosGeneralResponse.class),
-            @ApiResponse(code = 404, message = "Not found", response = PhotosGeneralResponse.class),
-            @ApiResponse(code = 500, message = "Internal Server Error", response = PhotosGeneralResponse.class),
-    })
+  //  @GetMapping("/all")
+   // @ApiOperation(value = "Gets all the configured Account types.", notes = "Returns a list of account types")
+   // @ApiResponses(value = {
+     //       @ApiResponse(code = 200, message = "Account types returned", response = PhotosGeneralResponse.class),
+       //     @ApiResponse(code = 400, message = "Bad Request", response = PhotosGeneralResponse.class),
+         //   @ApiResponse(code = 404, message = "Not found", response = PhotosGeneralResponse.class),
+           // @ApiResponse(code = 500, message = "Internal Server Error", response = PhotosGeneralResponse.class),
+   // })
 
-    public ResponseEntity<PhotosGeneralResponse<List<PhotosDto>>> GetAll() {
-        List<PhotosDto> photos = viewPhotosFlow.getAllPhotos();
+   // public ResponseEntity<PhotosGeneralResponse<List<PhotosDto>>> GetAll() {
+     //   List<PhotosDto> photos = viewPhotosFlow.getAllPhotos();
 
-        PhotosGeneralResponse<List<PhotosDto>> response = new PhotosGeneralResponse<List<PhotosDto>>(true, photos);
-        return new ResponseEntity<>(response, HttpStatus.OK);
-    }
+       // PhotosGeneralResponse<List<PhotosDto>> response = new PhotosGeneralResponse<List<PhotosDto>>(true, photos);
+        //return new ResponseEntity<>(response, HttpStatus.OK);
+    /*}
 
 
     public PhotosGeneralResponse<String> getAll() {
@@ -71,3 +71,5 @@ public class PhotosController {
     }
     private final ViewPhotosFlow viewPhotosFlow;
 }
+
+     */

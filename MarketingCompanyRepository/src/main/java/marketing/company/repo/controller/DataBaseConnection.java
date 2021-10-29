@@ -1,5 +1,9 @@
 package marketing.company.repo.controller;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;

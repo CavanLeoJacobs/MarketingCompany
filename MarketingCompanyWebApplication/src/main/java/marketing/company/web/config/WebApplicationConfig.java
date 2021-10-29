@@ -19,7 +19,7 @@ import org.springframework.context.annotation.PropertySource;
 
         }
 )
-//@PropertySource(value = "")
+@PropertySource(value = "index.html")
 public class WebApplicationConfig
 {
 
