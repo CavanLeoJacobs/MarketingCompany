@@ -19,6 +19,14 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 @PropertySource(value = "classpath:DataBase.properties")
 public class RepositoryConfig
 {
+   public RepositoryConfig()
+    {
+
+    }
+    public void GetAllRepositoryConfig()
+    {
+
+    }
 
   // countable noun.
     // The config of a computer system is the way in which all its parts,

@@ -22,7 +22,7 @@ public class DataBaseProperties {
 // not in here put properties in DataBase.properties because @PropertySource(value = "classpath:DataBase.properties")
 // in the RepositoryConfig
     // MAYBE
-/*
+
     private static final String[] ENTITY_PACKAGES_TO_SCAN = {"marketing.company.domain.persistence"};
     private static final String PERSISTENCE_UNIT_NAME = "marketing.company.persistence";
 
@@ -33,19 +33,19 @@ public class DataBaseProperties {
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         final LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
-       entityManagerFactoryBean.setDataSource(dataSource());
+       //entityManagerFactoryBean.setDataSource(dataSource());
         entityManagerFactoryBean.setPackagesToScan(ENTITY_PACKAGES_TO_SCAN);
         entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-         entityManagerFactoryBean.setJpaProperties(buildJpaProperties());
+        // entityManagerFactoryBean.setJpaProperties(buildJpaProperties());
         entityManagerFactoryBean.setPersistenceUnitName(PERSISTENCE_UNIT_NAME);
         return entityManagerFactoryBean;
     }
-
+/*
     @Bean
     public Properties buildJpaProperties() {
 
         Properties properties = new Properties();
-/*        properties.setProperty("javax.persistence.transactionType", "jta");
+       properties.setProperty("javax.persistence.transactionType", "jta");
         properties.setProperty("hibernate.IntegerCode.use_reflection_optimizer", "true");
         properties.setProperty("hibernate.transaction.factory_class", "org.hibernate.transaction.JTATransactionFactory");
         properties.setProperty("hibernate.query.factory_class", "org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory");

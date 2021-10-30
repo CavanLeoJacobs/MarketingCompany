@@ -15,7 +15,7 @@ public class ExceptionDataBase
         {
             DataBaseProperties exceptionHandlerForDataBase = new DataBaseProperties();
 
-            //exceptionHandlerForDataBase.entityManagerFactory();
+            exceptionHandlerForDataBase.entityManagerFactory();
         }
         catch (Exception error)
         {

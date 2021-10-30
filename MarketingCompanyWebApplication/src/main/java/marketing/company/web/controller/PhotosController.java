@@ -6,6 +6,7 @@ import marketing.company.domain.dto.PhotosDto;
 import marketing.company.domain.services.PhotosGeneralResponse;
 import marketing.company.logic.flow.ViewAlbumsFlow;
 import marketing.company.logic.flow.ViewPhotosFlow;
+import marketing.company.web.exceptions.PageNotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Random;
 
 @SpringBootApplication
 @RestController
@@ -22,8 +24,10 @@ import java.util.List;
 
 
 public class PhotosController {
-}
 
+
+
+}
 /*
 @SpringBootApplication
 @RestController

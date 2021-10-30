@@ -2,6 +2,7 @@ package marketing.company.web.config;
 
 
 
+
 import marketing.company.logic.config.LogicConfig;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
@@ -22,5 +23,8 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource(value = "index.html")
 public class WebApplicationConfig
 {
+       public WebApplicationConfig()
+        {
 
+        }
 }
