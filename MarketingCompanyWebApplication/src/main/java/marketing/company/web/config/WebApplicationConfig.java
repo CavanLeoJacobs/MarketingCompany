@@ -17,8 +17,8 @@ import org.springframework.context.annotation.PropertySource;
         {
                 "marketing.company.web.controller",
                 "marketing.company.web.exceptions",
-
         }
+
 )
 @PropertySource(value = "index.html")
 public class WebApplicationConfig
