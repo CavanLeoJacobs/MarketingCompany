@@ -11,7 +11,7 @@ public class PhotosDto implements Serializable
 {
     private static final long serialVersionUID = 6568108165313641961L;
 
-    private long PhotoID;
+    private Long PhotoID;
     private String FileFormat;
     private String Geolocation;
     private String Tags;
@@ -23,7 +23,7 @@ public class PhotosDto implements Serializable
     public PhotosDto() {
     }
 
-    public PhotosDto(long photoID, String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
+    public PhotosDto(Long photoID, String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
         PhotoID = photoID;
         FileFormat = fileFormat;
         Geolocation = geolocation;
@@ -34,7 +34,7 @@ public class PhotosDto implements Serializable
 
     public PhotosDto(PhotosDto photos)
     {
-       // this.setPhotoID(photos.getPhotoID());
+        this.setPhotoID(photos.getPhotoID());
         this.setFileFormat(photos.getFileFormat());
         this.setGeolocation(photos.getGeolocation());
         this.setTags(photos.getTags());
@@ -66,7 +66,7 @@ public class PhotosDto implements Serializable
         return CapturedBy;
     }
 
-    public void setPhotoID(long photoID) {
+    public void setPhotoID(Long photoID) {
         PhotoID = photoID;
     }
 
@@ -89,4 +89,6 @@ public class PhotosDto implements Serializable
     public void setCapturedBy(LocalDate capturedBy) {
         CapturedBy = capturedBy;
     }
+
+
 }

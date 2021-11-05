@@ -4,12 +4,13 @@ import marketing.company.domain.persistence.Albums;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class AlbumsDto implements Serializable
 {
-  private static final long serialVersionUID = 797566274463787428L;
+  private static final Long serialVersionUID = 797566274463787428L;
 
-  private long AlbumsID;
+  private Long AlbumsID;
   private String FileFormat;
   private String Geolocation;
   private String Tags;
@@ -21,7 +22,7 @@ public class AlbumsDto implements Serializable
 
   }
 
-  public AlbumsDto(long albumsID, String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
+  public AlbumsDto(Long albumsID, String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
     AlbumsID = albumsID;
     FileFormat = fileFormat;
     Geolocation = geolocation;
@@ -32,7 +33,7 @@ public class AlbumsDto implements Serializable
 
   public AlbumsDto(AlbumsDto albums)
   {
-   // this.setAlbumsID(albums.getAlbums_ID());
+    this.setAlbumsID(albums.getAlbums_ID());
     this.setFileFormat(albums.getFileFormat());
     this.setGeolocation(albums.getGeolocation());
     this.setTags(albums.getTags());
@@ -88,4 +89,18 @@ public class AlbumsDto implements Serializable
   public LocalDate getCapturedBy() {
     return CapturedBy;
   }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    AlbumsDto albumsDto = (AlbumsDto) o;
+    return Objects.equals(AlbumsID, albumsDto.AlbumsID) && FileFormat.equals(albumsDto.FileFormat) && Geolocation.equals(albumsDto.Geolocation) && Tags.equals(albumsDto.Tags) && CapturedDate.equals(albumsDto.CapturedDate) && CapturedBy.equals(albumsDto.CapturedBy);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(AlbumsID, FileFormat, Geolocation, Tags, CapturedDate, CapturedBy);
+  }
+
 }

@@ -2,6 +2,10 @@ package marketing.company.web.exceptions;
 
 public class PageNotFound
 {
+    PageNotFound()
+    {
+
+    }
     //try
    // {
 

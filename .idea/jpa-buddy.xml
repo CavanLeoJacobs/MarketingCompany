@@ -4,6 +4,7 @@
     <option name="sourceDiffType" value="DB" />
     <option name="defaultUnitInitialized" value="true" />
     <option name="sourceDbValue" value="5d215a1f-77d6-4d9b-9966-ce96573e8878" />
+    <option name="sourceModelValue" value="Default" />
     <option name="targetDbValue" value="5d215a1f-77d6-4d9b-9966-ce96573e8878" />
   </component>
 </project>

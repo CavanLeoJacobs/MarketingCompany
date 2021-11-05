@@ -1,6 +1,6 @@
 package marketing.company.web.controller;
 
-
+/*
 import marketing.company.domain.dto.AlbumsDto;
 import marketing.company.domain.services.AlbumsGeneralResponse;
 import marketing.company.logic.flow.ViewAlbumsFlow;
@@ -14,11 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@SpringBootApplication
+//@SpringBootApplication
 
-@RestController
-@RequestMapping("marketing-company")
+//@RestController
+//@RequestMapping("marketing-company")
 
+
+ */
 public class AlbumsController
 {
 /*
@@ -49,4 +51,5 @@ public class AlbumsController
     private final ViewAlbumsFlow viewAlbumsFlow;
 
  */
+
 }

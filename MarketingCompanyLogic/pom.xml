@@ -23,12 +23,7 @@
                 <version>${project.version}</version>
                 <scope>provided</scope>
             </dependency>
-        <dependency>
-            <groupId>org.webjars.bowergithub.angular</groupId>
-            <artifactId>angular</artifactId>
-            <version>6.1.0</version>
-            <scope>compile</scope>
-        </dependency>
+
 
         <!--
           <dependency>

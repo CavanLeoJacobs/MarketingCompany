@@ -1,9 +1,9 @@
 package marketing.company.domain.persistence;
 
-import javax.persistence.*;
+
 import java.io.Serializable;
 import java.time.LocalDate;
-
+import javax.persistence.*;
 @Entity
 @Table
 public class Photos implements Serializable

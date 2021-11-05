@@ -4,9 +4,9 @@ package marketing.company.domain.persistence;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
-
 @Entity
 @Table
+
 public class Albums implements Serializable
 {
     private static final long serialVersionUID = -4984226601624324688L;
@@ -17,8 +17,7 @@ public class Albums implements Serializable
     private LocalDate CapturedDate;
     private LocalDate CapturedBy;
 
-    public Albums()
-    {
+    public Albums() {
 
     }
 
@@ -44,24 +43,28 @@ public class Albums implements Serializable
     public Long getAlbums_ID() {
         return albums_ID;
     }
-    @Column(name ="FileFormat")
-            public String getFileFormat() {
+
+    @Column(name = "FileFormat")
+    public String getFileFormat() {
         return FileFormat;
     }
-    @Column(name ="Geolocation")
-    public String getGeolocation()
-    {
+
+    @Column(name = "Geolocation")
+    public String getGeolocation() {
         return Geolocation;
     }
-    @Column(name ="Tags")
+
+    @Column(name = "Tags")
     public String getTags() {
         return Tags;
     }
-    @Column(name ="CapturedDate")
+
+    @Column(name = "CapturedDate")
     public LocalDate getCapturedDate() {
         return CapturedDate;
     }
-    @Column(name ="LocalDate")
+
+    @Column(name = "LocalDate")
     public LocalDate getCapturedBy() {
         return CapturedBy;
     }
@@ -89,5 +92,5 @@ public class Albums implements Serializable
     public void setCapturedBy(LocalDate capturedBy) {
         CapturedBy = capturedBy;
     }
-
 }
+

@@ -1,7 +1,7 @@
 package marketing.company.web.controller;
 
 
-
+/*
 import marketing.company.domain.dto.PhotosDto;
 import marketing.company.domain.services.PhotosGeneralResponse;
 import marketing.company.logic.flow.ViewAlbumsFlow;
@@ -23,11 +23,7 @@ import java.util.Random;
 @RequestMapping("marketing-company")
 
 
-public class PhotosController {
 
-
-
-}
 /*
 @SpringBootApplication
 @RestController
@@ -77,3 +73,8 @@ public class PhotosController {
 }
 
      */
+       public class PhotosController {
+
+
+
+       }

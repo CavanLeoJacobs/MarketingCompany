@@ -33,14 +33,42 @@ public class DataBaseProperties {
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         final LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
-       //entityManagerFactoryBean.setDataSource(dataSource());
+       entityManagerFactoryBean.setDataSource(dataSource());
         entityManagerFactoryBean.setPackagesToScan(ENTITY_PACKAGES_TO_SCAN);
         entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         // entityManagerFactoryBean.setJpaProperties(buildJpaProperties());
         entityManagerFactoryBean.setPersistenceUnitName(PERSISTENCE_UNIT_NAME);
         return entityManagerFactoryBean;
     }
+
+        @Bean
+        public DataSource dataSource() {
+            EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
+            return builder.setType(EmbeddedDatabaseType.HSQL)
+                    .addScript("script/schema.sql")
+                    .addScript("script/data.sql")
+                    .build();
+        }
+
 /*
+@Bean
+    public DataSource dataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        //dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+
+        try {
+            dataSource.setUsername(username);
+            dataSource.setPassword(password);
+            dataSource.setUrl(datasourceUrl);
+            //dataSource.setImplicitCachingEnabled(true);
+            //dataSource.setFastConnectionFailoverEnabled(true);
+
+            return dataSource;
+
+        } catch (Exception error) {
+
+            throw new RuntimeException("Unable to connect to DB", error);
+        }
     @Bean
     public Properties buildJpaProperties() {
 
@@ -88,24 +116,7 @@ public class DataBaseProperties {
     @Value("${spring.datasource.password}")
     private String password="root";
 
-    @Bean
-    public DataSource dataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        //dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
 
-        try {
-            dataSource.setUsername(username);
-             dataSource.setPassword(password);
-            dataSource.setUrl(datasourceUrl);
-           //dataSource.setImplicitCachingEnabled(true);
-            //dataSource.setFastConnectionFailoverEnabled(true);
-
-            return dataSource;
-
-        } catch (Exception error) {
-
-            throw new RuntimeException("Unable to connect to DB", error);
-        }
 
 
 
@@ -113,9 +124,6 @@ public class DataBaseProperties {
     public JdbcTemplate getJdbcTemplate() {
         return new JdbcTemplate(dataSource());
     }
-
-
-
     @Bean
     public DataSource dataSource() {
         EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
@@ -124,6 +132,9 @@ public class DataBaseProperties {
                 .addScript("script/data.sql")
                 .build();
     }
+
+
+
 
     @Bean
     public DataSource dataSource() {

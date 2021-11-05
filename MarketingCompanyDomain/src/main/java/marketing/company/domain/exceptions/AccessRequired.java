@@ -8,7 +8,7 @@ public class AccessRequired
     {
         try
         {
-
+            System.out.println(errorMessage);
         }
         catch(Exception e)
         {
