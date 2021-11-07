@@ -2,10 +2,11 @@ package marketing.company.domain.exceptions;
 
 
 
+
 public class UnsupportedFormat
 {
 
-    private String errorMessage ="Unsupported format, please upload the content in a different format";
+    private final String errorMessage ="Unsupported format, please upload the content in a different format";
 
 
    // private List<String> list = new ArrayList<String>();
@@ -31,9 +32,9 @@ public class UnsupportedFormat
         }
     }
     public void FileFormat(String Format) {
-        try
-        {
-           // list.clear();
+        try {
+
+            // list.clear();
             // list.add("");
             //            list.add(".bmp");
             //            list.add(".ico");
@@ -45,11 +46,10 @@ public class UnsupportedFormat
 
 
 
-            if (Format==""||Format != ".bmp" ||Format !=".ico"||Format != ".jpeg" ||Format !=".jpg" ||Format !=".gif" ||Format !=".tiff" ||Format !=".png")
-            {
-                throw new Exception (errorMessage);
-            }
-
+          //  if (Format==""||Format == ".bmp" ||Format ==".ico"||Format == ".jpeg" ||Format ==".jpg" ||Format ==".gif" ||Format ==".tiff" ||Format ==".png")
+           // {
+            //    throw new Exception (errorMessage);
+            //}
         }
         catch (Exception type) {
             System.out.println(errorMessage);

@@ -1,10 +1,16 @@
 package marketing.company.web;
 
+
+import io.swagger.models.Swagger;
+import marketing.company.web.config.Sagger;
+import marketing.company.web.config.WebApplicationConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import org.springframework.context.ConfigurableApplicationContext;
-
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
+@Configuration
+@Component
 @SpringBootApplication
 public class ApplicationMain
 {
@@ -12,18 +18,13 @@ public class ApplicationMain
     public static void main(String[] args) {
 
 
-        try
-        {
-            SpringApplication.run(ApplicationMain.class, args);
-        }
-        catch (Exception error)
-        {
-         //   System.out.println(error.getClass());
-          //  System.out.println(error.getLocalizedMessage());
-          //  System.out.println(error.getMessage());
-        }
+       // SpringApplication.run(ApplicationMain.class, args);
 
+        //new WebApplicationConfig();
 
+        //SpringApplication.run(WebApplicationConfig.class, args);
+        SpringApplication.run(ApplicationMain.class, args);
+        //SpringApplication.run(ApplicationMain.class,args);
 
     }
 

@@ -1,0 +1,13 @@
+{
+  "name": "MarketingCompany",
+  "_cacheHeaders": {
+    "ETag": "W/\"81d29027415b97cb9b29ebeceffe5465\"",
+    "Content-Type": "text/html; charset=utf-8"
+  },
+  "_release": "e-tag:W/\"81d2902",
+  "main": "index",
+  "_source": "https://github.com/CavanLeoJacobs/MarketingCompany",
+  "_target": "*",
+  "_originalSource": "https://github.com/CavanLeoJacobs/MarketingCompany",
+  "_direct": true
+}

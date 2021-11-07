@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example - example-bd-compile-template</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/threejs/r84/three.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+    <script src="https:/ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://buildium.github.io/examples/example-bd-compile-template/../../examples-dep/default/src/index.js"></script>
+    <script src="https://buildium.github.io//bower_components/iframe-resizer/js/iframeResizer.contentWindow.min.js"></script>
+    <script src="script.js"></script>
+
+</head>
+<body ng-app="compileTemplateExample">
+<div ng-controller="ExampleController">
+    <label>Title
+        <input type="text" ng-model="title" />
+    </label>
+    <label>Compile Template
+        <textarea ng-model="dynamicHtml" style="display: block"></textarea>
+    </label>
+    <h2>Result</h2>
+    <div ng-bind-html="dynamicHtml" bd-compile-template></div>
+</div>
+</body>
+</html>
+
+<!--
+Copyright 2021 All Rights Reserved.
+
+-->

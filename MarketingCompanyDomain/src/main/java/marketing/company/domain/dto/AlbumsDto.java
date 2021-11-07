@@ -23,6 +23,7 @@ public class AlbumsDto implements Serializable
   }
 
   public AlbumsDto(Long albumsID, String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
+
     AlbumsID = albumsID;
     FileFormat = fileFormat;
     Geolocation = geolocation;

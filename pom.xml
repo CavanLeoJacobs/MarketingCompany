@@ -15,10 +15,25 @@
     <groupId>marketing.company</groupId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <haltOnFailure>false</haltOnFailure>
+        <slf4j-converter.version>1.5.0-M0</slf4j-converter.version>
+        <angular-ui-router-bower.version>1.0.28</angular-ui-router-bower.version>
+        <slf4j-converter.version>1.4.3</slf4j-converter.version>
+        <junit-jupiter.version>5.8.1</junit-jupiter.version>
+        <AngularJS.version>1.3.15</AngularJS.version>
+        <swagger-annotations.version>1.6.3</swagger-annotations.version>
+        <annotations.version>22.0.0</annotations.version>
+        <angular.version>12</angular.version>
+        <spring-boot-starter-web.version>2.1.6.RELEASE</spring-boot-starter-web.version>
+        <AngularJS.version>1.3.15</AngularJS.version>
+
+
+
     </properties>
     <modules>
         <module>MarketingCompanyDomain</module>
@@ -31,13 +46,8 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.jetbrains</groupId>
-                <artifactId>annotations</artifactId>
-                <version>22.0.0</version>
-            </dependency>
-            <dependency>
                 <groupId>io.springfox</groupId>
-                <artifactId>springfox-bean-validators</artifactId>
+                <artifactId>springfox-swagger2</artifactId>
                 <version>${springfox-swagger.version}</version>
                 <exclusions>
                     <exclusion>
@@ -51,9 +61,62 @@
                 </exclusions>
             </dependency>
             <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger-annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox-swagger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jetbrains</groupId>
+                <artifactId>annotations</artifactId>
+                <version>${annotations.version}</version>
+            </dependency>
+
+           <dependency>
+               <groupId>org.apache.zeppelin</groupId>
+               <artifactId>angular</artifactId>
+               <version>${angular.version}</version>
+           </dependency>
+            <!--
+              <dependency>
+
+                   <groupId>AngularElem</groupId>
+                   <artifactId></artifactId>
+                   <version></version>
+               </dependency>
+              import org.apache.zeppelin.display.angular.notebookscope;
+               import AngularElem;
+
+               // In paragraph scope
+               import org.apache.zeppelin.display.angular.paragraphscope;
+               import AngularElem;-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-bean-validators</artifactId>
+                <version>${springfox-swagger.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.fasterxml.jackson.annotation</groupId>
+                        <artifactId>jackson.annotation</artifactId>
+                    </exclusion>
+                    <!--
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+
+                -->
+                </exclusions>
+            </dependency>
+            <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <version>2.1.6.RELEASE</version>
+                <version>${spring-boot-starter-web.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -68,13 +131,31 @@
             <dependency>
                 <groupId>org.webjars.bowergithub.angular</groupId>
                 <artifactId>angular</artifactId>
-                <version>6.1.0</version>
+                <version>${angular.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.bower</groupId>
+                <artifactId>AngularJS</artifactId>
+                <version>${AngularJS.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-converter</artifactId>
+                <version>${slf4j-converter.version}</version>
                 <scope>compile</scope>
             </dependency>
         </dependencies>
-    </dependencyManagement>
 
+    </dependencyManagement>
     <dependencies>
+
+
+
+
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -88,11 +169,19 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.8.1</version>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.bower</groupId>
+            <artifactId>AngularJS</artifactId>
+            <version>${AngularJS.version}</version>
             <scope>test</scope>
         </dependency>
 
     </dependencies>
+
+
     <build>
         <pluginManagement>
             <plugins>

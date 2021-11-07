@@ -11,17 +11,30 @@ import java.util.List;
 
 public class ViewAlbumsFlowImpl implements ViewAlbumsFlow
 {
+
+   public ViewAlbumsFlowImpl()
+   {
+
+   }
+
+
+   public void AlbumsDto()
+   {
+     // AlbumsDto.view(AlbumsDto());
+
+   }
+
    //@Override
    //public AlbumsDto ViewAlbums()
    //{
 //return null;
  //  }
-   @Override
-   public List<AlbumsDto> getAllAlbums() {
-      List<AlbumsDto> albums = new ArrayList<>();
+  // @Override
+  // public List<AlbumsDto> getAllAlbums() {
+    //  List<AlbumsDto> albums = new ArrayList<>();
       // accountTypeDto.add(new PhotosDto("MILES", "Miles", LocalDate.now()));
-      return albums;
-   }
+     // return albums;
+   //}
 
    //public AlbumsDto ViewAlbums(AlbumsDto viewAlbumsDto)
    //{

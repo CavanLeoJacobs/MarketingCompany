@@ -5,10 +5,20 @@ import marketing.company.logic.flow.DeletePhotosFlow;
 
 public class DeletePhotosFlowImpl implements DeletePhotosFlow
 {
-    public DeletePhotosFlowImpl() {
+    PhotosDto delete=new PhotosDto();
+    public DeletePhotosFlowImpl()
+    {
+
     }
-    public void DeletePhotos() {
+
+    public void DeletePhotos()
+    {
+        delete.getPhotoID();
+        delete.getCapturedBy();
+        delete.getGeolocation();
+        delete.getTags();
     }
+
 /*
    // private final AccountTypeTranslator accountTypeTranslator;
 

@@ -2,9 +2,13 @@ package marketing.company.logic.config;
 
 
 import marketing.company.translator.config.TranslatorConfig;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+
+import static org.springframework.boot.SpringApplication.run;
 
 @Import(TranslatorConfig.class)
 @Configuration
@@ -12,9 +16,16 @@ import org.springframework.context.annotation.Import;
         {
         "marketing.company.logic.flow"
        })
+@SpringBootApplication
 public class LogicConfig
 {
-    //this is where we create,delete,view the photos
-    //Logic is the place for codeing in the impl
-    // and the flow is the this we get from the domain dto
+       public LogicConfig()
+       {
+
+              SpringApplication.run(TranslatorConfig.class);
+       }
+
+
+
+
 }
