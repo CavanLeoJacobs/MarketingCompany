@@ -3,13 +3,14 @@ package marketing.company.domain.persistence;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Objects;
 import javax.persistence.*;
 @Entity
 @Table
 public class Photos implements Serializable
 {
     private static final long serialVersionUID = 461151729495873009L;
-    private Long photo_id;
+    private Long Photo_id;
     private String FileFormat;
     private String Geolocation;
     private String Tags;
@@ -22,7 +23,7 @@ public class Photos implements Serializable
     }
 
     public Photos(Long photo_id, String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
-        this.photo_id = photo_id;
+        Photo_id = photo_id;
         FileFormat = fileFormat;
         Geolocation = geolocation;
         Tags = tags;
@@ -31,6 +32,7 @@ public class Photos implements Serializable
     }
 
     public Photos(String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
+
         FileFormat = fileFormat;
         Geolocation = geolocation;
         Tags = tags;
@@ -41,7 +43,7 @@ public class Photos implements Serializable
     @Id
     @Column(name = "photo_id", nullable = false)
     public Long getPhoto_id() {
-        return photo_id;
+        return Photo_id;
     }
     @Column(name = "FileFormat")
     public String getFileFormat() {
@@ -85,8 +87,7 @@ public class Photos implements Serializable
     }
 
     public void setPhoto_id(Long photo_id) {
-        this.photo_id = photo_id;
+        this.Photo_id = photo_id;
     }
-
 
 }

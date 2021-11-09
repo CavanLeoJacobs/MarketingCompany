@@ -1,4 +1,4 @@
-package marketing.company.translator.Impl;
+package marketing.company.translator.impl;
 
 import marketing.company.domain.dto.AlbumsDto;
 

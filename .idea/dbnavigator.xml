@@ -21,14 +21,45 @@
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
-    <autoscroll-to-editor value="false" />
-    <autoscroll-from-editor value="true" />
+    <autoscroll-to-editor value="true" />
+    <autoscroll-from-editor value="false" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="8fcef862-5b9d-4553-ba8c-2f95b7a55a4a">
+        <schema name="marketingcompany" object-types="table, view, procedure, function, constraint, index, column, dataset trigger" />
+        <schema name="mysql" object-types="table, view" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="8fcef862-5b9d-4553-ba8c-2f95b7a55a4a">
-      <console name="MarketingCompany" type="STANDARD" schema="marketingcompany" session="Main" />
+      <console name="MarketingCompany" type="STANDARD" schema="marketingcompany" session="Main"><![CDATA[--delete TABLE albums( (albums_id BIGINT NOT NULL, file_format VARCHAR(255) NULL, geolocation VARCHAR(255) NULL,tags VARCHAR(255) NULL,captured_date date NULL,captured_by date NULL,local_date date NULL,CONSTRAINT pk_albums PRIMARY KEY (albums_id));
+--local_date  NULL
+--select * from photos
+--select * from albums
+--insert into albums value (367798)
+
+CREATE TABLE albums (
+  albums_id BIGINT NOT NULL,
+  file_format VARCHAR(255) NULL,
+  geolocation VARCHAR(255) NULL,
+  tags VARCHAR(255) NULL,
+  captured_date date NULL,
+  captured_by date NULL,
+  local_date date NULL,
+  CONSTRAINT pk_albums PRIMARY KEY (albums_id)
+)
+CREATE TABLE photos (
+  photo_id BIGINT NOT NULL,
+  file_format VARCHAR(255) NULL,
+  geolocation VARCHAR(255) NULL,
+  tags VARCHAR(255) NULL,
+  captured_date date NULL,
+  captured_by date NULL,
+  CONSTRAINT pk_photos PRIMARY KEY (photo_id)
+)
+Select * from photos()
+Select * from albums()]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -38,7 +69,17 @@
     <connection id="8fcef862-5b9d-4553-ba8c-2f95b7a55a4a" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="8fcef862-5b9d-4553-ba8c-2f95b7a55a4a" dataset="marketingcompany.photos" active-filter-id="">
+      <filter id="0ff33c3c-41ee-421a-ad0b-9194052ed317" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="captured_by" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
     <filter-actions connection-id="8fcef862-5b9d-4553-ba8c-2f95b7a55a4a" dataset="sys.sys_config" active-filter-id="" />
+    <filter-actions connection-id="8fcef862-5b9d-4553-ba8c-2f95b7a55a4a" dataset="marketingcompany.albums" active-filter-id="">
+      <filter id="107bb61d-3597-4798-925b-50a14c489c3f" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="albums_id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -48,6 +89,7 @@
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
     <mapping file-url="file://$PROJECT_DIR$/MarketingCompanyRepository/src/main/resources/script/schema.sql" connection-id="8fcef862-5b9d-4553-ba8c-2f95b7a55a4a" session-id="MAIN" current-schema="marketingcompany" />
+    <mapping file-url="file://$PROJECT_DIR$/MarketingCompanyRepository/src/main/resources/script/drop.sql" connection-id="8fcef862-5b9d-4553-ba8c-2f95b7a55a4a" session-id="MAIN" current-schema="marketingcompany" />
     <mapping file-url="file://$PROJECT_DIR$/MarketingCompanyRepository/src/main/resources/script/MYSQL.sql" connection-id="8fcef862-5b9d-4553-ba8c-2f95b7a55a4a" session-id="MAIN" current-schema="marketingcompany" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
@@ -111,7 +153,7 @@
         </ssl-settings>
         <details>
           <charset value="UTF-8" />
-          <session-management value="true" />
+          <session-management value="false" />
           <ddl-file-binding value="true" />
           <database-logging value="false" />
           <connect-automatically value="true" />

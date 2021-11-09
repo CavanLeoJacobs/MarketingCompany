@@ -4,6 +4,8 @@ package marketing.company.domain.persistence;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Objects;
+
 @Entity
 @Table
 
@@ -81,7 +83,8 @@ public class Albums implements Serializable
         Geolocation = geolocation;
     }
 
-    public void setTags(String tags) {
+    public void setTags(String tags)
+    {
         Tags = tags;
     }
 
@@ -91,6 +94,19 @@ public class Albums implements Serializable
 
     public void setCapturedBy(LocalDate capturedBy) {
         CapturedBy = capturedBy;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Albums albums = (Albums) o;
+        return albums_ID.equals(albums.albums_ID) && Objects.equals(FileFormat, albums.FileFormat) && Objects.equals(Geolocation, albums.Geolocation) && Objects.equals(Tags, albums.Tags) && Objects.equals(CapturedDate, albums.CapturedDate) && Objects.equals(CapturedBy, albums.CapturedBy);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(albums_ID, FileFormat, Geolocation, Tags, CapturedDate, CapturedBy);
     }
 }
 

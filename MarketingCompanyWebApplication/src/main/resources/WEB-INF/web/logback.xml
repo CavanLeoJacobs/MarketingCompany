@@ -28,7 +28,6 @@
     <logger name="org.springframework" level="INFO"/>
     <logger name="org.hibernate" level="WARN"/>
 
-
     <!--your apps loggers-->
     <logger name="marketing.company" level="DEBUG"/>
     <root level="WARN">

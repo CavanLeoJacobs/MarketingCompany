@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class ViewPhotosTest {
+public class AlbumsTest {
     private ViewPhotosFlowImpl photosV;
     private PhotosDto photos;
     @Before
@@ -21,4 +21,5 @@ photosV = new ViewPhotosFlowImpl();
     {
        // System.out.print(photosV.ViewPhotos(photos));
     }
+
 }

@@ -1,11 +1,9 @@
 package marketing.company.domain.dto;
 
-import marketing.company.domain.persistence.Albums;
-import marketing.company.domain.persistence.Photos;
-
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.List;
+import java.util.Date;
+import java.util.Objects;
 
 public class PhotosDto implements Serializable
 {
@@ -17,7 +15,6 @@ public class PhotosDto implements Serializable
     private String Tags;
     private LocalDate CapturedDate;
     private LocalDate CapturedBy;
-    //I am not 100% sure what they mean? (Captured by) in project 2 scope
 
 
     public PhotosDto() {
@@ -90,5 +87,16 @@ public class PhotosDto implements Serializable
         CapturedBy = capturedBy;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PhotosDto photosDto = (PhotosDto) o;
+        return Objects.equals(PhotoID, photosDto.PhotoID) && Objects.equals(FileFormat, photosDto.FileFormat) && Objects.equals(Geolocation, photosDto.Geolocation) && Objects.equals(Tags, photosDto.Tags) && Objects.equals(CapturedDate, photosDto.CapturedDate) && Objects.equals(CapturedBy, photosDto.CapturedBy);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(PhotoID, FileFormat, Geolocation, Tags, CapturedDate, CapturedBy);
+    }
 }

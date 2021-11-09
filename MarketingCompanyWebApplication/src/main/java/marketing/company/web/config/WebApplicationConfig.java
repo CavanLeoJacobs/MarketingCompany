@@ -8,7 +8,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.ComponentScan;
-/*
+
+
 @Import(LogicConfig.class)
 @Configuration
 @ComponentScan(basePackages =
@@ -22,7 +23,17 @@ import org.springframework.context.annotation.ComponentScan;
 @PropertySource(value = "logback.xml")
 @PropertySource(value = "webapp.WEB-INF.web.xml")
 @SpringBootApplication
+public class WebApplicationConfig
+{
+    public WebApplicationConfig()
+    {
+      //  new LogicConfig();
+        //SpringApplication.run(WebApplicationConfig.class);
+    }
 
+
+}
+/*
         public  WebApplicationConfig()
         {
 
@@ -32,8 +43,4 @@ import org.springframework.context.annotation.ComponentScan;
 
 
  */
-public class WebApplicationConfig
-{
-
-}
 

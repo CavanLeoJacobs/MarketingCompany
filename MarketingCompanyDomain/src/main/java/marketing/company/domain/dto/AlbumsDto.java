@@ -16,7 +16,7 @@ public class AlbumsDto implements Serializable
   private String Tags;
   private LocalDate CapturedDate;
   private LocalDate CapturedBy;
-  //I am not 100% sure what they mean? (Captured by) in project 2 scope
+
   public AlbumsDto()
   {
 
@@ -96,12 +96,11 @@ public class AlbumsDto implements Serializable
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     AlbumsDto albumsDto = (AlbumsDto) o;
-    return Objects.equals(AlbumsID, albumsDto.AlbumsID) && FileFormat.equals(albumsDto.FileFormat) && Geolocation.equals(albumsDto.Geolocation) && Tags.equals(albumsDto.Tags) && CapturedDate.equals(albumsDto.CapturedDate) && CapturedBy.equals(albumsDto.CapturedBy);
+    return Objects.equals(AlbumsID, albumsDto.AlbumsID) && Objects.equals(FileFormat, albumsDto.FileFormat) && Objects.equals(Geolocation, albumsDto.Geolocation) && Objects.equals(Tags, albumsDto.Tags) && Objects.equals(CapturedDate, albumsDto.CapturedDate) && Objects.equals(CapturedBy, albumsDto.CapturedBy);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(AlbumsID, FileFormat, Geolocation, Tags, CapturedDate, CapturedBy);
   }
-
 }

@@ -7,10 +7,23 @@ public class PhotosGeneralResponse<P> implements Serializable
 {
     private static final long serialVersionUID = -5125154957713696269L;
 
+private String successfullycreated="successfullycreated";
+    private String successfullydeleted="successfullydeleted";
+/*
+    you have successfully uploaded,downloaded,shared,deleted,created an album
 
-    private final boolean successful;
-    private final transient P payload;
-    public PhotosGeneralResponse(boolean successful,P payload)
+
+     */
+
+
+
+
+
+
+    /* //private final String
+     private final transient P payload;
+    private final ;
+    public PhotosGeneralResponse("boolean successful,P payload")
     {
         this.successful = successful;
         this.payload= payload;
@@ -22,4 +35,6 @@ public class PhotosGeneralResponse<P> implements Serializable
     }
 
 
+
+     */
 }
