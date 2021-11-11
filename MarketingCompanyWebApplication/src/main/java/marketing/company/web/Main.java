@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 class Main
 {
+
     @Contract(pure = true)
     public static void main(String[] args)
     {
