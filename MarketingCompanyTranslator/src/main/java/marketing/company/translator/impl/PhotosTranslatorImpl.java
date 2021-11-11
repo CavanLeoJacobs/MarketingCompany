@@ -5,6 +5,7 @@ import marketing.company.domain.dto.PhotosDto;
 import marketing.company.domain.persistence.Photos;
 import marketing.company.repo.persistence.PhotosRepository;
 import marketing.company.translator.PhotosTranslator;
+import org.jetbrains.annotations.Contract;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -15,11 +16,18 @@ import java.util.List;
 public class PhotosTranslatorImpl implements PhotosTranslator
 {
     private final PhotosRepository photosRepository;
+    @Contract(pure = true)
     @Autowired
     public PhotosTranslatorImpl(PhotosRepository photosRepository)
     {
         this.photosRepository = photosRepository;
     }
+
+
+    public PhotosDto DeletePhotos() {
+        return null;
+    }
+
     @Override
     public List<PhotosDto> getAllPhotos()
     {
@@ -40,5 +48,6 @@ public class PhotosTranslatorImpl implements PhotosTranslator
         }
         return photosDto;
     }
+
 
 }

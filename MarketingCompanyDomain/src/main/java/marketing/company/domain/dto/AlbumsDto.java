@@ -1,11 +1,15 @@
 package marketing.company.domain.dto;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import marketing.company.domain.persistence.Albums;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
-
+@ApiModel(value="Albums",description="A DTO that represents the Albums")
 public class AlbumsDto implements Serializable
 {
   private static final Long serialVersionUID = 797566274463787428L;
@@ -17,11 +21,22 @@ public class AlbumsDto implements Serializable
   private LocalDate CapturedDate;
   private LocalDate CapturedBy;
 
+  @Contract(pure = true)
   public AlbumsDto()
   {
 
   }
 
+  @Contract(pure = true)
+  public AlbumsDto(String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
+    FileFormat = fileFormat;
+    Geolocation = geolocation;
+    Tags = tags;
+    CapturedDate = capturedDate;
+    CapturedBy = capturedBy;
+  }
+
+  @Contract
   public AlbumsDto(Long albumsID, String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
 
     AlbumsID = albumsID;
@@ -32,9 +47,9 @@ public class AlbumsDto implements Serializable
     CapturedBy = capturedBy;
   }
 
-  public AlbumsDto(AlbumsDto albums)
+  public AlbumsDto(@NotNull AlbumsDto albums)
   {
-    this.setAlbumsID(albums.getAlbums_ID());
+    this.setAlbumsID(albums.getAlbumsID());
     this.setFileFormat(albums.getFileFormat());
     this.setGeolocation(albums.getGeolocation());
     this.setTags(albums.getTags());
@@ -43,7 +58,10 @@ public class AlbumsDto implements Serializable
 
   }
 
-
+  @ApiModelProperty(position=1 ,value = "Albums.AlbumsID")
+  public Long getAlbumsID() {
+    return AlbumsID;
+  }
 
   public void setAlbumsID(Long albumsID) {
     AlbumsID = albumsID;
@@ -69,8 +87,6 @@ public class AlbumsDto implements Serializable
     CapturedBy = capturedBy;
   }
 
-  public long getAlbums_ID() {return AlbumsID;}
-
   public String getFileFormat() {
     return FileFormat;
   }
@@ -91,16 +107,5 @@ public class AlbumsDto implements Serializable
     return CapturedBy;
   }
 
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    AlbumsDto albumsDto = (AlbumsDto) o;
-    return Objects.equals(AlbumsID, albumsDto.AlbumsID) && Objects.equals(FileFormat, albumsDto.FileFormat) && Objects.equals(Geolocation, albumsDto.Geolocation) && Objects.equals(Tags, albumsDto.Tags) && Objects.equals(CapturedDate, albumsDto.CapturedDate) && Objects.equals(CapturedBy, albumsDto.CapturedBy);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(AlbumsID, FileFormat, Geolocation, Tags, CapturedDate, CapturedBy);
-  }
 }

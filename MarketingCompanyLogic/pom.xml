@@ -20,16 +20,17 @@
     <dependencies>
         <dependency>
             <groupId>marketing.company</groupId>
+            <artifactId>MarketingCompanyTranslator</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>marketing.company</groupId>
             <artifactId>MarketingCompanyDomain</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
         </dependency>
-            <dependency>
-                <groupId>marketing.company</groupId>
-                <artifactId>MarketingCompanyTranslator</artifactId>
-                <version>${project.version}</version>
-                <scope>provided</scope>
-            </dependency>
+
         <dependency>
             <groupId>org.webjars.bower</groupId>
             <artifactId>AngularJS</artifactId>

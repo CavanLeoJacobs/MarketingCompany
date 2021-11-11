@@ -1,6 +1,8 @@
 package marketing.company.domain.persistence;
 
 
+import org.jetbrains.annotations.Contract;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -12,19 +14,21 @@ import java.util.Objects;
 public class Albums implements Serializable
 {
     private static final long serialVersionUID = -4984226601624324688L;
-    private Long albums_ID;
+    private Long albumsID;
     private String FileFormat;
     private String Geolocation;
     private String Tags;
     private LocalDate CapturedDate;
     private LocalDate CapturedBy;
 
+    @Contract(pure = true)
     public Albums() {
 
     }
 
-    public Albums(Long albums_ID, String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
-        this.albums_ID = albums_ID;
+    @Contract(pure = true)
+    public Albums(Long albumsID, String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
+        this.albumsID = albumsID;
         FileFormat = fileFormat;
         Geolocation = geolocation;
         Tags = tags;
@@ -32,6 +36,7 @@ public class Albums implements Serializable
         CapturedBy = capturedBy;
     }
 
+    @Contract(pure = true)
     public Albums(String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
         FileFormat = fileFormat;
         Geolocation = geolocation;
@@ -41,9 +46,9 @@ public class Albums implements Serializable
     }
 
     @Id
-    @Column(name = "albums_id", nullable = false)
-    public Long getAlbums_ID() {
-        return albums_ID;
+    @Column(name = "albumsID", nullable = false)
+    public Long getAlbumsID() {
+        return albumsID;
     }
 
     @Column(name = "FileFormat")
@@ -71,8 +76,8 @@ public class Albums implements Serializable
         return CapturedBy;
     }
 
-    public void setAlbums_ID(Long albums_ID) {
-        this.albums_ID = albums_ID;
+    public void setAlbumsID(Long albumsID) {
+        this.albumsID = albumsID;
     }
 
     public void setFileFormat(String fileFormat) {
@@ -96,17 +101,6 @@ public class Albums implements Serializable
         CapturedBy = capturedBy;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Albums albums = (Albums) o;
-        return albums_ID.equals(albums.albums_ID) && Objects.equals(FileFormat, albums.FileFormat) && Objects.equals(Geolocation, albums.Geolocation) && Objects.equals(Tags, albums.Tags) && Objects.equals(CapturedDate, albums.CapturedDate) && Objects.equals(CapturedBy, albums.CapturedBy);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(albums_ID, FileFormat, Geolocation, Tags, CapturedDate, CapturedBy);
-    }
 }
 

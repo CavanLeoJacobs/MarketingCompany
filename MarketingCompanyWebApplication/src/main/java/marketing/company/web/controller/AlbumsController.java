@@ -21,8 +21,18 @@ import java.util.List;
 
 
  */
+
+import org.jetbrains.annotations.Contract;
+
 public class AlbumsController
 {
+    @Contract
+   public AlbumsController()
+    {
+
+    }
+   // @Autowired
+
 /*
     @GetMapping("/all")
     @ApiOperation(value = "Gets all the configured Account types.", notes = "Returns a list of account types")

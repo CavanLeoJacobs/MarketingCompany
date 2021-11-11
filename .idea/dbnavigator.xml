@@ -24,42 +24,15 @@
     <autoscroll-to-editor value="true" />
     <autoscroll-from-editor value="false" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="8fcef862-5b9d-4553-ba8c-2f95b7a55a4a">
-        <schema name="marketingcompany" object-types="table, view, procedure, function, constraint, index, column, dataset trigger" />
-        <schema name="mysql" object-types="table, view" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="8fcef862-5b9d-4553-ba8c-2f95b7a55a4a">
-      <console name="MarketingCompany" type="STANDARD" schema="marketingcompany" session="Main"><![CDATA[--delete TABLE albums( (albums_id BIGINT NOT NULL, file_format VARCHAR(255) NULL, geolocation VARCHAR(255) NULL,tags VARCHAR(255) NULL,captured_date date NULL,captured_by date NULL,local_date date NULL,CONSTRAINT pk_albums PRIMARY KEY (albums_id));
+      <console name="MarketingCompany" type="STANDARD" schema="mysql" session="Main"><![CDATA[--delete TABLE albums( (albums_id BIGINT NOT NULL, file_format VARCHAR(255) NULL, geolocation VARCHAR(255) NULL,tags VARCHAR(255) NULL,captured_date date NULL,captured_by date NULL,local_date date NULL,CONSTRAINT pk_albums PRIMARY KEY (albums_id));
 --local_date  NULL
 --select * from photos
 --select * from albums
---insert into albums value (367798)
-
-CREATE TABLE albums (
-  albums_id BIGINT NOT NULL,
-  file_format VARCHAR(255) NULL,
-  geolocation VARCHAR(255) NULL,
-  tags VARCHAR(255) NULL,
-  captured_date date NULL,
-  captured_by date NULL,
-  local_date date NULL,
-  CONSTRAINT pk_albums PRIMARY KEY (albums_id)
-)
-CREATE TABLE photos (
-  photo_id BIGINT NOT NULL,
-  file_format VARCHAR(255) NULL,
-  geolocation VARCHAR(255) NULL,
-  tags VARCHAR(255) NULL,
-  captured_date date NULL,
-  captured_by date NULL,
-  CONSTRAINT pk_photos PRIMARY KEY (photo_id)
-)
-Select * from photos()
-Select * from albums()]]></console>
+--insert into albums value (367798)ins]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -69,6 +42,7 @@ Select * from albums()]]></console>
     <connection id="8fcef862-5b9d-4553-ba8c-2f95b7a55a4a" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="8fcef862-5b9d-4553-ba8c-2f95b7a55a4a" dataset="mysql.engine_cost" active-filter-id="" />
     <filter-actions connection-id="8fcef862-5b9d-4553-ba8c-2f95b7a55a4a" dataset="marketingcompany.photos" active-filter-id="">
       <filter id="0ff33c3c-41ee-421a-ad0b-9194052ed317" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="captured_by" operator="=" value="" active="true" />
@@ -107,7 +81,7 @@ Select * from albums()]]></console>
     <last-used-operator value="EQUAL" />
     <filters />
   </component>
-  <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
+  <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="false">
     <recently-used-interfaces>
       <mapping database-type="MYSQL" interface-id="DEFAULT" />
     </recently-used-interfaces>

@@ -1,7 +1,6 @@
 package marketing.company.repo.exceptions;
 
-import javafx.scene.chart.ScatterChart;
-import marketing.company.repo.controller.DataBaseProperties;
+import marketing.company.repo.controller.DataBase;
 
 public class ExceptionDataBase
 {
@@ -13,7 +12,7 @@ public class ExceptionDataBase
 
         try
         {
-            DataBaseProperties exceptionHandlerForDataBase = new DataBaseProperties();
+            DataBase exceptionHandlerForDataBase = new DataBase();
 
             exceptionHandlerForDataBase.entityManagerFactory();
         }

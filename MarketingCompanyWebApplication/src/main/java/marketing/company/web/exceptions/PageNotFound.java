@@ -1,7 +1,10 @@
 package marketing.company.web.exceptions;
 
+import org.jetbrains.annotations.Contract;
+
 public class PageNotFound
 {
+    @Contract(pure = true)
     PageNotFound()
     {
 

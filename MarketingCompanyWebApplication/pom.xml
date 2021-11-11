@@ -83,14 +83,16 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.3</version>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.2.3</version>
-                <configuration>
-                    <webXml>src\main\resources\WEB-INF\web.xml</webXml>
-                </configuration>
+             <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-war-plugin</artifactId>
+              <version>3.2.3</version>
+           <configuration>
+                  <webXml>src\main\webapp\WEB-INF\web.xml</webXml>
+              </configuration>
+
             </plugin>
+
 
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>

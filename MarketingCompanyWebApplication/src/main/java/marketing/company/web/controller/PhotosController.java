@@ -56,7 +56,10 @@ import java.util.Random;
    // public ResponseEntity<PhotosGeneralResponse<List<PhotosDto>>> GetAll() {
      //   List<PhotosDto> photos = viewPhotosFlow.getAllPhotos();
 
-       // PhotosGeneralResponse<List<PhotosDto>> response = new PhotosGeneralResponse<List<PhotosDto>>(true, photos);
+import marketing.company.domain.services.PhotosGeneralResponse;
+import org.jetbrains.annotations.Contract;
+
+// PhotosGeneralResponse<List<PhotosDto>> response = new PhotosGeneralResponse<List<PhotosDto>>(true, photos);
         //return new ResponseEntity<>(response, HttpStatus.OK);
     /*}
 
@@ -73,8 +76,17 @@ import java.util.Random;
 }
 
      */
+
        public class PhotosController {
+           @Contract
+             public PhotosController()
+             {
 
+             }
+             public PhotosGeneralResponse<String> Linking()
+             {
 
+                 return new PhotosGeneralResponse<>(true, "s");
+             }
 
        }

@@ -1,9 +1,15 @@
 package marketing.company.domain.dto;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
+@ApiModel(value="Photos",description="A DTO that represents the Photos")
 
 public class PhotosDto implements Serializable
 {
@@ -17,9 +23,19 @@ public class PhotosDto implements Serializable
     private LocalDate CapturedBy;
 
 
+    @Contract(pure = true)
     public PhotosDto() {
     }
 
+    public PhotosDto(String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
+        FileFormat = fileFormat;
+        Geolocation = geolocation;
+        Tags = tags;
+        CapturedDate = capturedDate;
+        CapturedBy = capturedBy;
+    }
+
+    @Contract(pure = true)
     public PhotosDto(Long photoID, String fileFormat, String geolocation, String tags, LocalDate capturedDate, LocalDate capturedBy) {
         PhotoID = photoID;
         FileFormat = fileFormat;
@@ -29,7 +45,7 @@ public class PhotosDto implements Serializable
         CapturedBy = capturedBy;
     }
 
-    public PhotosDto(PhotosDto photos)
+    public PhotosDto(@NotNull PhotosDto photos)
     {
         this.setPhotoID(photos.getPhotoID());
         this.setFileFormat(photos.getFileFormat());
@@ -38,10 +54,11 @@ public class PhotosDto implements Serializable
         this.setCapturedDate(photos.getCapturedDate());
         this.setCapturedBy(photos.getCapturedBy());
     }
-
-    public long getPhotoID() {
+    @ApiModelProperty(position=1 ,value = ("Photos.photoID"))
+    public Long getPhotoID() {
         return PhotoID;
     }
+
 
     public String getFileFormat() {
         return FileFormat;
@@ -87,6 +104,7 @@ public class PhotosDto implements Serializable
         CapturedBy = capturedBy;
     }
 
+    @Contract(value = "null -> false", pure = true)
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

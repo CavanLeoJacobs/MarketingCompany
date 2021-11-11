@@ -5,5 +5,8 @@
       <data-source id="5d215a1f-77d6-4d9b-9966-ce96573e8878" name="MarketingCompany" url="jdbc:mysql://localhost/MarketingCompany" driverClass="com.mysql.cj.jdbc.Driver" />
       <data-source id="d3723677-5fab-49d9-b140-45d15eb2053e" name="MarketingCompanyDataBase" url="jdbc:mysql://localhost/MarketingCompany?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=UTC" driverClass="com.mysql.jdbc.Driver" />
     </data-sources>
+    <data-source-infos>
+      <data-source-info id="5d215a1f-77d6-4d9b-9966-ce96573e8878" persistence-unit-name="Default" />
+    </data-source-infos>
   </component>
 </project>

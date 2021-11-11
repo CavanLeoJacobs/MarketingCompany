@@ -2,8 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <description>Demo_project_for_Spring_Boot</description>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -29,11 +28,13 @@
     <groupId>marketing.company</groupId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <description>Demo_project_for_Spring_Boot</description>
     <modules>
         <module>MarketingCompanyDomain</module>
-        <module>MarketingCompanyLogic</module>
-        <module>MarketingCompanyTranslator</module>
         <module>MarketingCompanyRepository</module>
+        <module>MarketingCompanyTranslator</module>
+        <module>MarketingCompanyLogic</module>
         <module>MarketingCompanyWebApplication</module>
     </modules>
     <dependencyManagement>
@@ -113,6 +114,11 @@
     </dependencyManagement>
     <dependencies>
         <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+
+        </dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-converter</artifactId>
             <version>${slf4j-converter.version}</version>
@@ -145,35 +151,75 @@
             <version>${AngularJS.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.7.1</version>
-                <executions>
-                    <execution>
-                        <id>default-site</id>
+        <pluginManagement>
+
+            <plugins>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>org.jacoco.report</artifactId>
+                    <version>0.8.3</version>
+
+                    <configuration>
+                        <haltOnFailure>${haltOnFailure}</haltOnFailure>
+                        <rules>
+                            <element>CLASS</element>
+                            <excludes>
+                                <exclude>marketing.company.domain.*</exclude>
+                                <exclude>marketing.company.logic.config.LogicConfig</exclude>
+                                <exclude>marketing.company.repo.config.RepositoryConfig</exclude>
+                                <exclude>marketing.company.translator.config.TranslatorConfig</exclude>
+                                <exclude>marketing.company.web.config.angular</exclude>
+                                <exclude>marketing.company.web.config.Sagger</exclude>
+                                <exclude>marketing.company.web.config.WebApplicationConfig</exclude>
+                            </excludes>
+                        </rules>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                    <version>3.1.2</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.7.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
+
+        <!--
+         <id>default-site</id>
                         <phase>site</phase>
                         <goals>
                             <goal>site</goal>
                         </goals>
-                        <configuration>
-
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
+           <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>3.1.2</version>
             </plugin>
-        </plugins>
-    </build>
-</project>
-        <!--
                <build>
            <plugins>
                <plugin>

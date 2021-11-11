@@ -6,6 +6,7 @@ import marketing.company.domain.persistence.Albums;
 
 import marketing.company.repo.persistence.AlbumsRepository;
 import marketing.company.translator.AlbumsTranslator;
+import org.jetbrains.annotations.Contract;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -16,6 +17,7 @@ import java.util.List;
 public class AlbumsTranslatorImpl implements AlbumsTranslator
 {
     private final AlbumsRepository albumsRepository;
+    @Contract
     @Autowired
     public AlbumsTranslatorImpl(AlbumsRepository albumsRepository)
     {
@@ -45,5 +47,6 @@ public class AlbumsTranslatorImpl implements AlbumsTranslator
         }
         return albumsDto;
     }
+
 
 }
